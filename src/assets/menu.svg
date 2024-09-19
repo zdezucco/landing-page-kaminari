@@ -1,5 +1,7 @@
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M3 12H21" stroke="#23A6F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M3 6H21" stroke="#23A6F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M3 18H21" stroke="#23A6F0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="100px" height="100px" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+<g><path style="opacity:1" fill="#f11917" d="M 8.5,20.5 C 35.8415,20.1669 63.1748,20.5002 90.5,21.5C 92.296,25.1643 91.296,27.6643 87.5,29C 62.1667,29.6667 36.8333,29.6667 11.5,29C 7.53121,27.3169 6.53121,24.4836 8.5,20.5 Z"/></g>
+<g><path style="opacity:1" fill="#f51815" d="M 8.5,45.5 C 35.8415,45.1669 63.1748,45.5002 90.5,46.5C 92.296,50.1643 91.296,52.6643 87.5,54C 62.1667,54.6667 36.8333,54.6667 11.5,54C 7.53121,52.3169 6.53121,49.4836 8.5,45.5 Z"/></g>
+<g><path style="opacity:1" fill="#f41815" d="M 8.5,70.5 C 35.8415,70.1669 63.1748,70.5002 90.5,71.5C 92.296,75.1643 91.296,77.6643 87.5,79C 62.1667,79.6667 36.8333,79.6667 11.5,79C 7.53121,77.3169 6.53121,74.4836 8.5,70.5 Z"/></g>
 </svg>

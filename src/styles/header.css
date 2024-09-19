@@ -1,5 +1,5 @@
 .reverse-color {
-    color: var(--secondary-color);
+    color: var(--bg-color);
   }
   
   .reverse-color:hover {

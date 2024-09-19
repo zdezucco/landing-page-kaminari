@@ -15,11 +15,13 @@ export default function Home() {
 
     useEffect(() => {
         if (showMobileMenu) {
-          document.body.style.overflowY = 'hidden';
+          document.body.style.overflowY = "hidden";
         } else {
-          document.body.style.overflowY = 'auto';
+          document.body.style.overflowY = "auto";
         }
-        console.log("Executou!");
+        return () => {
+          document.body.style.overflowY = "auto";
+        };
       }, [showMobileMenu]);
 
     return (
@@ -145,7 +147,7 @@ export default function Home() {
             </section>
 
             <section id="performance">
-                
+
             </section>
         </>
     )
