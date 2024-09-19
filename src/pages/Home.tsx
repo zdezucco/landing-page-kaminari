@@ -28,8 +28,8 @@ export default function Home() {
         <>
             <header className="container py-sm">
                 <nav className="flex items-center justify-between">
-                    <img src={Logo} alt="Logo HowToLive" width={220} height={20} />
-                    <div className="desktop-only">
+                    <img src={Logo} alt="Logo Kaminari" width={220} height={20} />
+                    <div className="desktop-only">  
                         <ul className="flex gap-1">
                             <li>
                                 <a href="#">Home</a>
@@ -39,7 +39,7 @@ export default function Home() {
                             </li>
                             <li>
                                 <a href="#estetica">Estética</a>
-                            </li>
+                            </li>       
                             <li>
                                 <a href="#performance">Performance</a>
                             </li>
@@ -111,32 +111,34 @@ export default function Home() {
 
             <section id="mecanica">
             <div>
-                <h1>Sob medida para você</h1>
+                <h1>A Mecânica importa sim!</h1>
                 <p>
-                Inovação é com a gente! A [nome empresa] já conquistou diversos clientes,
-                seja você mais um deles, veja tudo que pode ganhar com nossos serviços.
+                    Gostamos muito de estética claro, mas para obter um bom equilibro entre estética, performance e principalmente CONFIABILIDADE, devemos ter uma boa mecânica. Logo abaixo está um resumo do que o projeto KAMINARI possui.
                 </p>
             </div>
-                <div id='cards'>
-                    <div id="card">
-                    <h3>Produto Vencedor</h3>
+                <div className='cards'>
+                    <div className="card">
+                    <h3>Suspensão e Freios</h3>
                     <p>
-                        Ideia matadora, nosso time já ganhou diversos eventos de inovação com nosso produto,
-                        entre eles podemos citar o CityFarm da FAG e Startup Garage.
+                        Carro está equipado com uma Suspensão a ar da Castor, com bolsas reforçadas na traseira e amortecedor encurtado 6.5cm na dianteira. Oferecendo praticidade, conforto e uma boa performance dependendo da altura de rodagem. 
+                        Equipado com pastilhas de cerâmica e discos ventilados para fornecer uma melhor frenagem e segurança.
                     </p>
                     </div>
-                    <div id="card">
-                    <h3>Produto Vencedor</h3>
+                    <div className="card">
+                    <h3>Motor</h3>
                     <p>
-                        Ideia matadora, nosso time já ganhou diversos eventos de inovação com nosso produto,
-                        entre eles podemos citar o CityFarm da FAG e Startup Garage.
+                        Possui motor D17 de 1.7 Litros, com 115cv, 15,2kgfm de torque, girando seus bélissimos 7.100rpm. 
+                        Com uma boa relação peso potência, oferecendo uma boa performance com seus 1155kg. 
+                        Atualmente este motor conta com filtro esportivo, coletor de escape 4x1, pistão 0.50 e um conversor de combustível para que o mesmo possa funcionar com Etanol, fornecendo um pouco mais de fôlego para o motor.
                     </p>
                     </div>
-                    <div id="card">
-                    <h3>Produto Vencedor</h3>
+                    <div className="card">
+                    <h3>Tração</h3>
                     <p>
-                        Ideia matadora, nosso time já ganhou diversos eventos de inovação com nosso produto,
-                        entre eles podemos citar o CityFarm da FAG e Startup Garage.
+                        Equipado com pneus iris 205/45.
+                        Rodas 17 GSW 181 de tala 7.5". 
+                        Embreagem de Cerâmica para até 400cv.
+                        Câmbio de 5 marchas manual.
                     </p>
                     </div>
                 </div>
