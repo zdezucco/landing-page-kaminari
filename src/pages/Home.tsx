@@ -2,6 +2,9 @@ import { useEffect, useState } from "react";
 import Close from "../assets/close.svg";
 import Menu from "../assets/menu.svg";
 import Logo from "../assets/logo.svg";
+import Suspensão from "../assets/suspensao.png";
+import Motor from "../assets/motor.png";
+import Tracao from "../assets/tracao.png";
 import "../styles/header.css";
 import "../styles/utility.css";
 import Button from "../components/buttons.tsx";
@@ -118,28 +121,31 @@ export default function Home() {
             </div>
                 <div className='cards'>
                     <div className="card">
-                    <h3>Suspensão e Freios</h3>
-                    <p>
-                        Carro está equipado com uma Suspensão a ar da Castor, com bolsas reforçadas na traseira e amortecedor encurtado 6.5cm na dianteira. Oferecendo praticidade, conforto e uma boa performance dependendo da altura de rodagem. 
-                        Equipado com pastilhas de cerâmica e discos ventilados para fornecer uma melhor frenagem e segurança.
-                    </p>
+                        <img src={Suspensão} alt="Simbolo Suspensão" width={100} height={125} ></img>
+                        <h2>Suspensão e Freios</h2>
+                        <p>
+                            Carro está equipado com uma Suspensão a ar da Castor, com bolsas reforçadas na traseira e amortecedor encurtado 6.5cm na dianteira. Oferecendo praticidade, conforto e uma boa performance dependendo da altura de rodagem. 
+                            Equipado com pastilhas de cerâmica e discos ventilados para fornecer uma melhor frenagem e segurança.
+                        </p>
                     </div>
                     <div className="card">
-                    <h3>Motor</h3>
-                    <p>
-                        Possui motor D17 de 1.7 Litros, com 115cv, 15,2kgfm de torque, girando seus bélissimos 7.100rpm. 
-                        Com uma boa relação peso potência, oferecendo uma boa performance com seus 1155kg. 
-                        Atualmente este motor conta com filtro esportivo, coletor de escape 4x1, pistão 0.50 e um conversor de combustível para que o mesmo possa funcionar com Etanol, fornecendo um pouco mais de fôlego para o motor.
-                    </p>
+                        <img src={Motor} alt="Simbolo Motor" width={125} height={125}></img>
+                        <h2>Motor</h2>
+                        <p>
+                            Possui motor D17 de 1.7 Litros, com 115cv, 15,2kgfm de torque, girando seus bélissimos 7.100rpm. 
+                            Com uma boa relação peso potência, oferecendo uma boa performance com seus 1155kg. 
+                            Atualmente este motor conta com filtro esportivo, coletor de escape 4x1, pistão 0.50 e um conversor de combustível para que o mesmo possa funcionar com Etanol, fornecendo um pouco mais de fôlego para o motor.
+                        </p>
                     </div>
                     <div className="card">
-                    <h3>Tração</h3>
-                    <p>
-                        Equipado com pneus iris 205/45.
-                        Rodas 17 GSW 181 de tala 7.5". 
-                        Embreagem de Cerâmica para até 400cv.
-                        Câmbio de 5 marchas manual.
-                    </p>
+                        <img src={Tracao} alt="Simbolo Tração" width={100} height={125} ></img>
+                        <h2>Tração</h2>
+                        <p>
+                            Equipado com pneus iris 205/45.
+                            Rodas 17 GSW 181 de tala 7.5". 
+                            Embreagem de Cerâmica para até 400cv.
+                            Câmbio de 5 marchas manual.
+                        </p>
                     </div>
                 </div>
             </section>

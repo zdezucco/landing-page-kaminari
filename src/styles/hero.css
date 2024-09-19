@@ -39,7 +39,7 @@
 
 @media (width >= 1280px) {
     #hero {
-        background: var(--bg-color);
+        background: var(--light-gray);
         border-top: none;
 
         > span {
