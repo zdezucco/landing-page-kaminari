@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Close from "../assets/close.svg";
 import Menu from "../assets/menu.svg";
 import Logo from "../assets/logo.svg";
@@ -8,38 +8,48 @@ import Button from "../components/buttons.tsx";
 import Quadradao from "../assets/images/quadradao.png";
 import Quadradin from "../assets/images/quadradin.png";
 import "../styles/hero.css";
+import "../styles/mecanica.css";
 
 export default function Home() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
+
+    useEffect(() => {
+        if (showMobileMenu) {
+          document.body.style.overflowY = 'hidden';
+        } else {
+          document.body.style.overflowY = 'auto';
+        }
+        console.log("Executou!");
+      }, [showMobileMenu]);
 
     return (
         <>
             <header className="container py-sm">
                 <nav className="flex items-center justify-between">
-                    <img src={Logo} alt="Logo HowToLive" width={220} height={80} />
+                    <img src={Logo} alt="Logo HowToLive" width={220} height={20} />
                     <div className="desktop-only">
                         <ul className="flex gap-1">
                             <li>
                                 <a href="#">Home</a>
                             </li>
                             <li>
-                                <a href="#solution">Soluções</a>
+                                <a href="#mecanica">Mecânica</a>
                             </li>
                             <li>
-                                <a href="#testimonials">Depoimentos</a>
+                                <a href="#estetica">Estética</a>
                             </li>
                             <li>
-                                <a href="#pricing">Preços</a>
+                                <a href="#performance">Performance</a>
                             </li>
                             <li>
-                                <a href="#contact">Contato</a>
+                                <a href="#redesocial">Redes Sociais</a>
                             </li>
                         </ul>
                     </div>
                     <div className="desktop-only">
                     <div className="flex items-center">
                             <a className="reverse-color ml-lg" href="">Login</a>
-                            <Button text="Cadastre-se" />
+                            <Button text="Apoie o Projeto" />
                         </div>
                     </div>
                     <div className="mobile-menu">
@@ -51,19 +61,16 @@ export default function Home() {
                                             <a href="#">Home</a>
                                         </li>
                                         <li>
-                                            <a href="#solution">Soluções</a>
+                                            <a href="#mecanica">Mecânica</a>
                                         </li>
                                         <li>
-                                            <a href="#testimonials">Depoimentos</a>
+                                            <a href="#estetica">Estética</a>
                                         </li>
                                         <li>
-                                            <a href="#pricing">Preços</a>
+                                            <a href="#performance">Performance</a>
                                         </li>
                                         <li>
-                                            <a href="#contact">Contato</a>
-                                        </li>
-                                        <li>
-                                            <a className="reverse-color" href="#">Login</a>
+                                            <a href="#redesocial">Redes Sociais</a>
                                         </li>
                                     </ul>
                                     <span onClick={() => setShowMobileMenu(!showMobileMenu)} className="btn-wrapper">
@@ -88,20 +95,57 @@ export default function Home() {
                 </span>
                 <img src={Quadradao} alt="Retangulo" />
                 <div className="container content">
-                    <p className="desktop-only">Olá</p>
                     <h1>
-                        Uma Solução que irá te entregar X
-                    </h1>
+                        Um projeto fora da caixa
+                    </h1>   
                     <p>
-                        Você sabe que, para alcançar o sucesso, é fundamental ter parceiros que te impulsionem a ir mais longe
+                        Nem sempre seguir padrões pode ser o ideal para você, neste caso, eu decidi criar algo que fosse único e fora da caixa. 
                     </p>
                     <div>
-                        <span><Button text="Cadastre-se" /></span>
-                        <span className="desktop-only">
-                            <Button text="Veja mais" secondary />
-                        </span>
+                        <span><Button text="Acompanhe o Projeto" /></span>
                     </div>
                 </div>
+            </section>
+
+            <section id="mecanica">
+            <div>
+                <h1>Sob medida para você</h1>
+                <p>
+                Inovação é com a gente! A [nome empresa] já conquistou diversos clientes,
+                seja você mais um deles, veja tudo que pode ganhar com nossos serviços.
+                </p>
+            </div>
+                <div id='cards'>
+                    <div id="card">
+                    <h3>Produto Vencedor</h3>
+                    <p>
+                        Ideia matadora, nosso time já ganhou diversos eventos de inovação com nosso produto,
+                        entre eles podemos citar o CityFarm da FAG e Startup Garage.
+                    </p>
+                    </div>
+                    <div id="card">
+                    <h3>Produto Vencedor</h3>
+                    <p>
+                        Ideia matadora, nosso time já ganhou diversos eventos de inovação com nosso produto,
+                        entre eles podemos citar o CityFarm da FAG e Startup Garage.
+                    </p>
+                    </div>
+                    <div id="card">
+                    <h3>Produto Vencedor</h3>
+                    <p>
+                        Ideia matadora, nosso time já ganhou diversos eventos de inovação com nosso produto,
+                        entre eles podemos citar o CityFarm da FAG e Startup Garage.
+                    </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="estetica">
+
+            </section>
+
+            <section id="performance">
+                
             </section>
         </>
     )

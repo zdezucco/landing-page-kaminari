@@ -16,12 +16,12 @@
 
 :root {
   --bg-color: #ffffff;
-  --text-color: #252B42;
+  --text-color: #ce0909;
   --second-text-color: #000000;
   --light-text-color: #FFF;
   --light-gray: #F8F8F8;
-  --primary-color: #23a6f0;
-  --secondary-color: #B2E3FF;
+  --primary-color: #ce0909;
+  --secondary-color: #ffffff;
 
   --ff-sans: "Monstererrat", system-ui, sans-serif;
   --fw-base: 400;

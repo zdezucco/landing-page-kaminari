@@ -1,0 +1,62 @@
+#mecanica {
+    background: var(--light-gray);
+    border-top: 0.125rem solid #e4e4e4;
+    height: 90vh;
+    display: flex;
+}
+
+#mecanica div {
+    max-width: 800px;
+    text-align: center;
+    margin-bottom: 30px;
+  
+    h1 {
+      font-size: 2em;
+      color: #2d3e50;
+    }
+  
+    p {
+      font-size: 1.2em;
+      color: #7a889e;
+    }
+  
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.5em;
+      }
+      p {
+        font-size: 1em;
+      }
+    }
+}
+
+#mecanica .cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+#mecanica .cards {
+    width: 300px;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+
+    h3 {
+        font-size: 1.4em;
+        color: #2d3e50;
+    }
+
+    p {
+        font-size: 1em;
+        color: #7a889e;
+    }
+
+    @media (max-width: 768px) {
+        width: 90%;
+    }
+}
+
