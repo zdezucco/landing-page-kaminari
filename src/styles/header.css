@@ -9,6 +9,10 @@
   .ml-lg {
     margin-right: 2.875rem;
   }
+
+  .no-scroll {
+    overflow: hidden;
+  }
   
   .mobile-menu {
     display: initial;

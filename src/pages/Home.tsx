@@ -18,14 +18,14 @@ export default function Home() {
 
     useEffect(() => {
         if (showMobileMenu) {
-          document.body.style.overflowY = "hidden";
+          document.body.classList.add("no-scroll");
         } else {
-          document.body.style.overflowY = "auto";
+          document.body.classList.remove("no-scroll");
         }
         return () => {
-          document.body.style.overflowY = "auto";
+          document.body.classList.remove("no-scroll");
         };
-      }, [showMobileMenu]);
+    }, [showMobileMenu]);
 
     return (
         <>
