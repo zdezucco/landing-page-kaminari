@@ -18,12 +18,18 @@ export default function Home() {
 
     useEffect(() => {
         if (showMobileMenu) {
+          // Adiciona a classe que impede o scroll ao body e html
           document.body.classList.add("no-scroll");
+          document.documentElement.classList.add("no-scroll"); // Adiciona ao html
         } else {
+          // Remove a classe que impede o scroll do body e html
           document.body.classList.remove("no-scroll");
+          document.documentElement.classList.remove("no-scroll"); // Remove do html
         }
         return () => {
+          // Limpeza no desmontar o componente
           document.body.classList.remove("no-scroll");
+          document.documentElement.classList.remove("no-scroll"); // Remove do html
         };
     }, [showMobileMenu]);
 
