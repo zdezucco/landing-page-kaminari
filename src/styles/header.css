@@ -10,17 +10,11 @@
     margin-right: 2.875rem;
   }
 
-  html,
-  body {
-    overflow-x: hidden; /* Impede o scroll horizontal */
-    height: 100%; /* Certifica que o body ocupa a altura total */
-  }
-  
   .no-scroll {
-    overflow: hidden; /* Remove scroll vertical e horizontal */
-    height: 100vh; /* Garante que o body não expanda além da tela */
-    position: fixed; /* Travar a posição do body */
-    width: 100%; /* Certifica que não há scroll lateral */
+    overflow: hidden; 
+    height: 100vh; 
+    position: fixed; 
+    width: 100%; 
   }
   
   .mobile-menu {
