@@ -3,6 +3,7 @@
     border-top: 0.125rem solid #e4e4e4;
     height: 90vh;
     display: flex;
+    overflow-y: hidden;
 }
 
 #hero > img {
@@ -42,6 +43,7 @@
     #hero {
         background: var(--light-gray);
         border-top: none;
+        height: 95vh;
 
         > span {
             position: absolute;

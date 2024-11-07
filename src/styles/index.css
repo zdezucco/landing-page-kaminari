@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   font: inherit;
@@ -39,7 +39,7 @@
   --px-lg: 1.5rem;
 }
 
-html{
+html {
   font-family: var(--ff-sans);
   font-weight: var(--fw-base);
   font-size: var(--fs-base);
@@ -54,8 +54,8 @@ body {
   overflow-x: hidden;
 }
 
-h1, 
-h2, 
+h1,
+h2,
 h3 {
   line-height: 1.2;
   color: var(--text-color);
@@ -95,7 +95,7 @@ ul {
   list-style: none;
 }
 
-@media (width >= 1280px) {
+@media (width >=1280px) {
   :root {
     --fs-lg: 2rem;
     --fs-xl: 2.625rem;
