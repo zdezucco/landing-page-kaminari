@@ -24,8 +24,9 @@
   display: flex;
   justify-content: center;
   gap: 20px;
-  flex-wrap: nowrap;
-  overflow-x: auto; 
+  overflow-x: scroll;
+  justify-content: flex-start;
+  margin-inline: 10%;
   margin-top: 30px;
   padding-bottom: 20px;
 }
@@ -60,7 +61,18 @@
   margin-top: 5px;
 } 
 
-@media (max-width: 768px) {
+@media (width > 768px) {
+
+  #mecanica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #mecanica .cards {
+    overflow-x: hidden;
+  }
+
   #mecanica .card {
       min-width: 250px;
   }

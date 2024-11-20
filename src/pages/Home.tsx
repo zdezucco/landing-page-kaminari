@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import Close from "../assets/close.svg";
 import Menu from "../assets/menu.svg";
 import Logo from "../assets/logo.svg";
+import Check from "../assets/check.svg";
 import Suspensão from "../assets/suspensao.png";
 import Motor from "../assets/motor.png";
 import Tracao from "../assets/tracao.png";
@@ -14,9 +15,14 @@ import Quadradin from "../assets/images/quadradin.png";
 import "../styles/hero.css";
 import "../styles/mecanica.css";
 import "../styles/areadofa.css";
+import "../styles/redes-sociais.css";
+import "../styles/contact.css";
+
 
 export default function Home() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
+    const [email, setMail] = useState("");
+    const [name, setName] = useState("");
 
     useEffect(() => {
         const html = document.querySelector("html");
@@ -25,6 +31,24 @@ export default function Home() {
         }
     }, [showMobileMenu]);
 
+    function realizarRequest() {
+        fetch('https://kaminari-mail.azurewebsites.net/api/httptrigger1', {
+            method: 'POST',
+            mode: "no-cors",
+            headers: {
+                 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              toMail: email,
+              toName: name,
+            }),
+          })
+          .then(res => res.json())
+    }
+
+
+    function botaoRedirecionarPagina(){
+        window.location.href = "https://www.instagram.com/civic.kaminari/";
+    }
 
     return (
         <>
@@ -40,9 +64,6 @@ export default function Home() {
                                 <a href="#estetica">Estética</a>
                             </li>
                             <li>
-                                <a href="#performance">Performance</a>
-                            </li>
-                            <li>
                                 <a href="#redes-sociais">Redes Sociais</a>
                             </li>
                             <li>
@@ -52,8 +73,8 @@ export default function Home() {
                     </div>
                     <div className="desktop-only">
                         <div className="flex items-center">
-                            <a className="reverse-color ml-lg" href="">Login</a>
-                            <Button text="Apoie o Projeto" />
+                            <a className="reverse-color ml-lg" id="login">Login</a>
+                            <Button func={() => console.log("teste")}  text="Apoie o Projeto" />
                         </div>
                     </div>
                     <div className="mobile-menu">
@@ -104,7 +125,7 @@ export default function Home() {
                         Nem sempre seguir padrões pode ser o ideal para você, neste caso, eu decidi criar algo que fosse único e fora da caixa.
                     </p>
                     <div>
-                        <span><Button text="Acompanhe o Projeto" /></span>
+                        <span><Button func={botaoRedirecionarPagina} text="Acompanhe o Projeto" /></span>
                     </div>
                 </div>
             </section>
@@ -151,13 +172,84 @@ export default function Home() {
 
             </section>
 
-            <section id="performance">
-
-            </section>
-
-            <section id="redes-sociais">
-
-            </section>
+            <section id="redes-sociais" className="container">
+                <header>
+                    <p className="desktop-only">Formas de Apoio</p>
+                    <h2>Nossos Planos</h2>
+                </header>
+                <section className="even-columns">
+                    <div className="pricing-card">
+                        <span className="plan">
+                            <h3>Plano Básico</h3>
+                            <p>Siga nosso perfil e acompanhe o projeto</p>
+                            </span>
+                            <h2>Grátis</h2>
+                            <Button func={botaoRedirecionarPagina} text="Seguir agora" />
+                            <span className="hr"></span>
+                            <ul className="features">
+                                <li>
+                                    <img src={Check} alt="" />
+                                    <p>Veja somente os stories normais</p>
+                                </li>
+                                <li>
+                                    <img src={Check} alt="" />
+                                    <p>Até 5 stories por dia</p>
+                                </li>
+                            </ul>
+                    </div>
+                    <div className="pricing-card premium">
+                        <span className="bonus">
+                            <p>1º Mês Grátis</p>
+                        </span>
+                        <span className="plan">
+                            <h3>Plano Premium</h3>
+                            <p>Entre no nosso Close Friends e Acompanhe o conteúdo DIÁRIO</p>
+                            </span>
+                            <span className="price">
+                                <h2>R$19,90</h2>
+                                <p>/Mês</p>
+                            </span>
+                            <Button func={() => console.log("teste")} text="Entrar Agora" key='premium' />
+                            <span className="hr"></span>
+                            <ul className="features">
+                                <li>
+                                    <img src={Check} alt="" />
+                                    <p>Conteudo diário através do Close Friends</p>
+                                </li>
+                                <li>
+                                    <img src={Check} alt="" />
+                                    <p>Sem limite de Stories por dia</p>
+                                </li>
+                            </ul>
+                    </div>
+                    <div className="pricing-card">
+                        <span className="plan">
+                            <h3>Parceirasso!</h3>
+                            <p>Entre no nosso Close Friends e no nosso Grupo no WhatsApp para ter acesso a conteúdo exclusivo e participar das nossas conversas</p>
+                            </span>
+                            <span className="price">
+                                <h2>R$39,90</h2>
+                                <p>/Mês</p>
+                            </span>
+                            <Button func={() => console.log("teste")} text="Experimentar Agora" />
+                            <span className="hr"></span>
+                            <ul className="features">
+                                <li>
+                                    <img src={Check} alt="" />
+                                    <p>Conteúdo diário através do Close Friends</p>
+                                </li>
+                                <li>
+                                    <img src={Check} alt="" />
+                                    <p>Sem limite de Stories por dia</p>
+                                </li>
+                                <li>
+                                    <img src={Check} alt="" />
+                                    <p>Grupo no Whatsapp com várias pessoas e conteúdos EXCLUSIVOS!</p>
+                                </li>
+                            </ul>
+                    </div>
+                </section>
+            </section>x
 
             <section id="areadofa">
                 <header>
@@ -189,7 +281,8 @@ export default function Home() {
                             cargo="Piloto de Rua"
                             imgUrl="https://thmais.com.br/wp-content/uploads/2024/01/20170724-velozes-furiosos-papo-de-cinema.jpg"
                         />
-
+                    </div>
+                    <div className="carousel-content">
                         <TestimonialCard
                             testemunho="Olha, visualmente o carro está incrível. O design passa a sensação de velocidade mesmo parado. As linhas são agressivas, mas sem perder a elegância, o que é importante para um carro de corrida. A escolha das cores é bem feita, traz um ar moderno e ao mesmo tempo clássico. O formato aerodinâmico parece estar bem pensado, dá para ver que cada curva e ângulo foi projetado para cortar o ar. É o tipo de carro que chama a atenção logo de cara, mas, como sempre digo, além de bonito, ele precisa entregar na pista."
                             name="Ayrton Senna"
@@ -214,6 +307,25 @@ export default function Home() {
                 </section>
 
             </section>
+
+            <section id="contact">
+                <header>
+                    <span>
+                        <p>Um presente para quem gostar</p>
+                        <h2>Pacote Gratuíto do Fã</h2>
+                    </span>
+                    <p>Caso tenha gostado do projeto, forneça seu nome e e-mail logo abaixo, após pressionar o botão "Gostei do projeto", enviaremos um kit com fotos e vídeos do projeto para que possa verificar de perto.</p>
+                </header>
+                <span className="input">
+                    <input type="text" value={email} 
+                        onChange={event => setMail(event.target.value)} placeholder="Seu e-mail" />
+                    <input type="text" value={name}
+                        onChange={event => setName(event.target.value)} placeholder="Seu nome"/>
+                    
+                    <Button text="Gostei do Projeto" func={realizarRequest} />
+                </span>
+            </section>
+
         </>
     )
 
