@@ -32,7 +32,7 @@ export default function Home() {
     }, [showMobileMenu]);
 
     function realizarRequest() {
-        fetch('https://kaminari-mail.azurewebsites.net/api/httptrigger1', {
+        fetch('/api', {
             method: 'POST',
             mode: "no-cors",
             headers: {
