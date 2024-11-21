@@ -60,7 +60,7 @@ export default function Contato() {
     <section id="contact">
     <header>
         <span>
-            <p>Um presente para quem gostar</p>
+            <p>Um Presente Misterioso!</p>
             <h2>Pacote Gratuíto do Fã</h2>
         </span>
         <p>Caso tenha gostado do projeto, forneça seu nome e e-mail logo abaixo, após pressionar o botão "Gostei do projeto", enviaremos um kit com fotos e vídeos do projeto para que possa verificar de perto.</p>
@@ -75,7 +75,7 @@ export default function Contato() {
             <input type="email" className='email' value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Digite seu e-mail" required />
             <textarea value={name} className='nome' onChange={(e) => setName(e.target.value)} placeholder="Digite seu nome" required />
 
-            <button type="submit" disabled={loading}>{loading ? 'Enviando...' : 'Enviar'}</button>
+            <button type="submit" disabled={loading}>{loading ? 'Enviando...' : 'Gostei do Projeto!'}</button>
             {error && <p className="error">{error}</p>}
             {successMessage && <p className="success">{successMessage}</p>}
           </span>
