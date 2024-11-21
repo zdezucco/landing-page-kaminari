@@ -308,15 +308,15 @@ export default function Home() {
                             <a href="#">Termos de Serviço</a>
                         </span>
                         <div id="footer_social_media">
-                            <a href="#" className='footer-link' id="instagram">
+                            <a href="https://www.instagram.com/civic.kaminari/" className='footer-link' id="instagram">
                                 <img src={Instagram} alt="Instagram" />
                             </a>
 
-                            <a href="#" className='footer-link' id="tiktok">
+                            <a href="https://www.tiktok.com/@zdezucco?lang=pt-BR" className='footer-link' id="tiktok">
                                 <img src={Tiktok} alt="Tiktok" />
                             </a>
 
-                            <a href="#" className='footer-link' id="youtube">
+                            <a href="https://www.youtube.com/@gabrielbzucco" className='footer-link' id="youtube">
                                 <img src={YouTube} alt="Youtube" />
                             </a>
                         </div>
