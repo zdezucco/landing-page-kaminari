@@ -26,7 +26,7 @@ export default function Contato() {
     setSuccessMessage('');
 
     try {
-      const response = await fetch('/api/function-1', {
+      const response = await fetch('https://us-central1-emerald-circle-442303-r9.cloudfunctions.net/function-1', {
         method: 'POST',
         headers: {
           'Access-Control-Allow-Origin': '*',
