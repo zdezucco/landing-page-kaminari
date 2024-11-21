@@ -23,7 +23,7 @@
 
     p {
         color: var(--second-text-color);
-        
+        display: ruby;
     }
 
     .telageral {
@@ -41,13 +41,69 @@
         height: 500px;
         text-align: center;
 
-        .campos{
+        #campos{
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             padding: 12px 20px;
-            
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+
+        #campos label {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: block;
+            color: #333;
+        }
+        
+        #campos input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0 20px 0;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #f9f9f9;
+            font-size: 16px;
+            color: #333;
+            transition: all 0.3s ease;
+        }
+        
+        #campos input:focus {
+            border-color: #5e81f4;
+            outline: none;
+            background-color: #fff;
+        }
+        
+        #campos input::placeholder {
+            color: #aaa;
+            font-style: italic;
+        }
+
+        .botaoEnviar{
+            width: 100%;
+            background: var(--primary-color);
+            color: var(--light-text-color);
+            font-weight: var(--fw-bold);
+            font-size: var(--fs-sm);
+            padding-block: 0.825rem;
+            padding-inline: 1.5rem;
+            margin-top: 1rem;
+            border-radius: 0.4rem;
+            cursor: pointer;
+            border: solid transparent 0.15rem;
         }
 
         .email{
@@ -76,7 +132,26 @@
     }
 }
 
-@media (width >=580px) {
+@media (width <= 999px) {
+    #contact {
+        gap: 3rem;
+        padding-block: 5rem;
+        box-sizing: border-box;
+        display: flex;
+        margin-bottom: 50rem;
+        max-width: 400px;
+        max-height: 250px;
+        margin-inline: auto;
+    }
+
+    .telageral{
+        max-height: 450px;
+        max-width: 320px;
+    }
+
+}
+
+@media (width >= 1080px) {
     #contact {
         gap: 5rem;
         align-items: center;

@@ -71,11 +71,11 @@ export default function Contato() {
             <h2>Insira os seus dados 
               para receber o pacote gratuíto</h2>
         </span>
-          <span className='campos'> 
+          <span id="campos" className='container'> 
             <input type="email" className='email' value={email} onChange={(e) => setEmail(e.target.value)} placeholder="Digite seu e-mail" required />
-            <textarea value={name} className='nome' onChange={(e) => setName(e.target.value)} placeholder="Digite seu nome" required />
+            <input type="text" className='nome' value={name} onChange={(e) => setName(e.target.value)} placeholder="Digite seu nome" required />
 
-            <button type="submit" disabled={loading}>{loading ? 'Enviando...' : 'Gostei do Projeto!'}</button>
+            <button type="submit" className='botaoEnviar' disabled={loading}>{loading ? 'Enviando...' : 'Gostei do Projeto!'}</button>
             {error && <p className="error">{error}</p>}
             {successMessage && <p className="success">{successMessage}</p>}
           </span>

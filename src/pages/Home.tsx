@@ -299,12 +299,14 @@ export default function Home() {
             <footer>
                 <div id="footer_content">
                     <div id="footer_contacts">
-                        <img src={LogoInvertida} alt="Logo Kaminari" width={220} height={20} />
-
-                        <a href="#">Sobre Nós</a>
-                        <a href="#">Politica de Privacidade</a>
-                        <a href="#">Termos de Serviço</a>
-
+                        <span className="logo">
+                            <img className="logoKaminari" src={LogoInvertida} alt="Logo Kaminari" width={220} height={20} />
+                        </span>
+                        <span className="textos">
+                            <a href="#">Sobre Nós</a>
+                            <a href="#">Politica de Privacidade</a>
+                            <a href="#">Termos de Serviço</a>
+                        </span>
                         <div id="footer_social_media">
                             <a href="#" className='footer-link' id="instagram">
                                 <img src={Instagram} alt="Instagram" />
@@ -318,7 +320,6 @@ export default function Home() {
                                 <img src={YouTube} alt="Youtube" />
                             </a>
                         </div>
-                        
                         <div id="footer_copyright">
                             <p>&#169; 2024 Todos os Direitos Reservados </p>
                         </div>
