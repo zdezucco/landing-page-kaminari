@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://kaminari-enviaremail.azurewebsites.net/api/enviar-mail',
+        target: 'https://us-central1-emerald-circle-442303-r9.cloudfunctions.net',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       }

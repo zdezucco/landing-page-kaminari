@@ -2,7 +2,11 @@ import { useEffect, useState } from "react";
 import Close from "../assets/close.svg";
 import Menu from "../assets/menu.svg";
 import Logo from "../assets/logo.svg";
+import LogoInvertida from "../assets/logo-invertida.svg"
 import Check from "../assets/check.svg";
+import Instagram from "../assets/instagram.svg";
+import Tiktok from "../assets/tiktok.svg";
+import YouTube from "../assets/youtube.svg";
 import Suspensão from "../assets/suspensao.png";
 import Motor from "../assets/motor.png";
 import Tracao from "../assets/tracao.png";
@@ -10,19 +14,19 @@ import "../styles/header.css";
 import "../styles/utility.css";
 import Button from "../components/buttons.tsx";
 import TestimonialCard from "../components/TestimonialCard.tsx";
+import Contato from "../components/contato.tsx";
 import Quadradao from "../assets/images/quadradao.png";
 import Quadradin from "../assets/images/quadradin.png";
 import "../styles/hero.css";
 import "../styles/mecanica.css";
 import "../styles/areadofa.css";
-import "../styles/redes-sociais.css";
+import "../styles/planos.css";
 import "../styles/contact.css";
-
+import "../styles/footer.css";
 
 export default function Home() {
     const [showMobileMenu, setShowMobileMenu] = useState(false);
-    const [email, setMail] = useState("");
-    const [name, setName] = useState("");
+ 
 
     useEffect(() => {
         const html = document.querySelector("html");
@@ -30,20 +34,6 @@ export default function Home() {
             html.style.overflow = showMobileMenu ? "hidden" : "auto";
         }
     }, [showMobileMenu]);
-
-    function realizarRequest() {
-        fetch('/api', {
-            method: 'POST',
-            mode: "no-cors",
-            headers: {
-                 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-              toMail: email,
-              toName: name,
-            }),
-          })
-          .then(res => res.json())
-    }
 
 
     function botaoRedirecionarPagina(){
@@ -61,13 +51,13 @@ export default function Home() {
                                 <a href="#mecanica">Mecânica</a>
                             </li>
                             <li>
-                                <a href="#estetica">Estética</a>
-                            </li>
-                            <li>
-                                <a href="#redes-sociais">Redes Sociais</a>
+                                <a href="#planos">Nossos Planos</a>
                             </li>
                             <li>
                                 <a href="#areadofa">Área do Fã</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contato</a>
                             </li>
                         </ul>
                     </div>
@@ -168,11 +158,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section id="estetica">
-
-            </section>
-
-            <section id="redes-sociais" className="container">
+            <section id="planos" className="container">
                 <header>
                     <p className="desktop-only">Formas de Apoio</p>
                     <h2>Nossos Planos</h2>
@@ -307,25 +293,38 @@ export default function Home() {
                 </section>
 
             </section>
-
-            <section id="contact">
-                <header>
-                    <span>
-                        <p>Um presente para quem gostar</p>
-                        <h2>Pacote Gratuíto do Fã</h2>
-                    </span>
-                    <p>Caso tenha gostado do projeto, forneça seu nome e e-mail logo abaixo, após pressionar o botão "Gostei do projeto", enviaremos um kit com fotos e vídeos do projeto para que possa verificar de perto.</p>
-                </header>
-                <span className="input">
-                    <input type="text" value={email} 
-                        onChange={event => setMail(event.target.value)} placeholder="Seu e-mail" />
-                    <input type="text" value={name}
-                        onChange={event => setName(event.target.value)} placeholder="Seu nome"/>
                     
-                    <Button text="Gostei do Projeto" func={realizarRequest} />
-                </span>
-            </section>
+            <Contato />
 
+            <footer>
+                <div id="footer_content">
+                    <div id="footer_contacts">
+                        <img src={LogoInvertida} alt="Logo Kaminari" width={220} height={20} />
+
+                        <a href="#">Sobre Nós</a>
+                        <a href="#">Politica de Privacidade</a>
+                        <a href="#">Termos de Serviço</a>
+
+                        <div id="footer_social_media">
+                            <a href="#" className='footer-link' id="instagram">
+                                <img src={Instagram} alt="Instagram" />
+                            </a>
+
+                            <a href="#" className='footer-link' id="tiktok">
+                                <img src={Tiktok} alt="Tiktok" />
+                            </a>
+
+                            <a href="#" className='footer-link' id="youtube">
+                                <img src={YouTube} alt="Youtube" />
+                            </a>
+                        </div>
+                        
+                        <div id="footer_copyright">
+                            <p>&#169; 2024 Todos os Direitos Reservados </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </>
     )
 
