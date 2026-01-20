@@ -5,7 +5,7 @@
 ## 🇧🇷 Português
 
 ### 📌 Sobre o Projeto
-A **Kaminari Landing Page** é uma aplicação web desenvolvida com o objetivo de apresentar de forma moderna, responsiva e objetiva os serviços e informações da marca **Kaminari**.
+A **Kaminari Landing Page** é uma aplicação web desenvolvida com o objetivo de apresentar de forma moderna, responsiva e objetiva os serviços e informações do projeto **Kaminari**.
 
 O projeto foi construído utilizando **React com TypeScript**, focando em performance, organização de código e experiência do usuário. A aplicação segue o conceito de **Landing Page**, direcionando o visitante a entender rapidamente a proposta da empresa e possibilitando o contato direto por meio de formulários.
 
@@ -88,7 +88,7 @@ Este projeto demonstra a aplicação prática de conceitos modernos de desenvolv
 ## 🇺🇸 English
 
 ### 📌 About the Project
-The **Kaminari Landing Page** is a web application designed to present the **Kaminari** brand in a modern, responsive, and professional way.
+The **Kaminari Landing Page** is a web application designed to present the **Kaminari** project in a modern, responsive, and professional way.
 
 Built with **React and TypeScript**, the project focuses on performance, clean architecture, and user experience.
 
