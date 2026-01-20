@@ -1,50 +1,129 @@
-# React + TypeScript + Vite
+# ⚡ Kaminari – Landing Page
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+---
 
-Currently, two official plugins are available:
+## 🇧🇷 Português
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 📌 Sobre o Projeto
+A **Kaminari Landing Page** é uma aplicação web desenvolvida com o objetivo de apresentar de forma moderna, responsiva e objetiva os serviços e informações da marca **Kaminari**.
 
-## Expanding the ESLint configuration
+O projeto foi construído utilizando **React com TypeScript**, focando em performance, organização de código e experiência do usuário. A aplicação segue o conceito de **Landing Page**, direcionando o visitante a entender rapidamente a proposta da empresa e possibilitando o contato direto por meio de formulários.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+---
 
-- Configure the top-level `parserOptions` property like this:
+### 🎯 Objetivo
+O principal objetivo do projeto é:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Criar uma landing page moderna e profissional;
+- Aplicar boas práticas de desenvolvimento front-end;
+- Utilizar uma arquitetura organizada por componentes;
+- Implementar um formulário funcional com envio de e-mails;
+- Preparar o projeto para deploy em ambiente de produção.
+
+---
+
+### 🛠️ Tecnologias Utilizadas
+- **React 18**
+- **TypeScript**
+- **Vite**
+- **HTML5**
+- **CSS3**
+- **SendGrid** (envio de e-mails)
+- **ESLint**
+- **Netlify** (deploy)
+
+---
+
+### 🗂️ Estrutura do Projeto
+
+```bash
+landing-page-kaminari
+├── public/
+├── src/
+│   ├── assets/
+│   ├── components/
+│   ├── pages/
+│   ├── styles/
+│   ├── main.tsx
+│   └── vite-env.d.ts
+├── index.html
+├── netlify.toml
+├── sendgrid.env
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── README.md
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+---
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+### ✉️ Envio de E-mails
+O projeto conta com integração ao **SendGrid**, permitindo o envio de mensagens diretamente pelo formulário da landing page.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+> ⚠️ As credenciais do SendGrid devem ser configuradas corretamente por meio de variáveis de ambiente para funcionamento em produção.
+
+---
+
+### ▶️ Como Executar o Projeto Localmente
+
+```bash
+npm install
+npm run dev
+npm run build
+npm run preview
 ```
+
+---
+
+### 🚀 Deploy
+O projeto está preparado para deploy na **Netlify**, utilizando o arquivo `netlify.toml`.
+
+---
+
+### ✅ Considerações Finais
+Este projeto demonstra a aplicação prática de conceitos modernos de desenvolvimento front-end, sendo ideal para **portfólio**, **apresentação profissional** e **uso comercial**.
+
+---
+
+## 🇺🇸 English
+
+### 📌 About the Project
+The **Kaminari Landing Page** is a web application designed to present the **Kaminari** brand in a modern, responsive, and professional way.
+
+Built with **React and TypeScript**, the project focuses on performance, clean architecture, and user experience.
+
+---
+
+### 🎯 Purpose
+- Build a modern and professional landing page;
+- Apply front-end best practices;
+- Use a component-based architecture;
+- Implement a functional contact form;
+- Prepare the project for production deployment.
+
+---
+
+### 🛠️ Technologies Used
+- **React 18**
+- **TypeScript**
+- **Vite**
+- **HTML5**
+- **CSS3**
+- **SendGrid**
+- **Netlify**
+
+---
+
+### ▶️ Running Locally
+
+```bash
+npm install
+npm run dev
+npm run build
+npm run preview
+```
+
+---
+
+### ✅ Final Notes
+This project showcases modern front-end development practices and is suitable for **portfolio**, **professional**, and **commercial** usage.
